@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using RPGM.Core;
 using RPGM.UI;
 using UnityEngine;
+using System;
 
 namespace RPGM.Gameplay
 {
@@ -38,6 +39,8 @@ namespace RPGM.Gameplay
 
         public bool destroySpawnsOnQuestComplete = true;
 
+        public bool gainCompetence = false;
+
         public Cutscene introCutscenePrefab, outroCutscenePrefab;
 
         List<GameObject> cleanup = new List<GameObject>();
@@ -71,6 +74,12 @@ namespace RPGM.Gameplay
 
         public void OnStartQuest()
         {
+            Console.WriteLine("Starting QUEST !");
+            if(gainCompetence){
+                Console.WriteLine("Starting quest with gain competence !");
+                // Ajouter une compétence
+                model.AddCompetenceItem();
+            }
             isFinished = false;
             if (introCutscenePrefab != null)
             {

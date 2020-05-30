@@ -18,16 +18,20 @@ namespace RPGM.Gameplay
         public DialogController dialog;
         public InputController input;
         public InventoryController inventoryController;
+        public CompetencesController competencesController;
         public MusicController musicController;
 
         Dictionary<GameObject, HashSet<string>> conversations = new Dictionary<GameObject, HashSet<string>>();
 
         Dictionary<string, int> inventory = new Dictionary<string, int>();
+        Dictionary<string, int> competences = new Dictionary<string, int>();
+
         Dictionary<string, Sprite> inventorySprites = new Dictionary<string, Sprite>();
 
         HashSet<string> storyItems = new HashSet<string>();
 
         public IEnumerable<string> InventoryItems => inventory.Keys;
+        public IEnumerable<string> CompetencesItems => competences.Keys;
 
         public Sprite GetInventorySprite(string name)
         {
@@ -51,6 +55,12 @@ namespace RPGM.Gameplay
             inventorySprites[item.name] = item.sprite;
             inventory[item.name] = c;
             inventoryController.Refresh();
+        }
+
+        public void AddCompetenceItem()
+        {
+            competences["toto"] = 2;
+            competencesController.Refresh();
         }
 
         public bool HasInventoryItem(string name, int count = 1)
