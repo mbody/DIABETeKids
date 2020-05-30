@@ -18,6 +18,7 @@ namespace RPGM.UI
 	    {
 	      sizer = GetComponent<SpriteUIElement>();
 	      Refresh();
+	      model.competencesController = this;
 	      // A DECLENCHER PAR LA SUITE 
 	      //sizer.Show();
 	    }

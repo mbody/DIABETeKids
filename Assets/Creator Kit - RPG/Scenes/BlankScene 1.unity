@@ -15361,7 +15361,7 @@ PrefabInstance:
     - target: {fileID: 6576607644387126882, guid: a6ecdc63374074e6eb42a738a5683a91,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
-      value: 3.0000002
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6576607644387126882, guid: a6ecdc63374074e6eb42a738a5683a91,
         type: 3}
@@ -19004,7 +19004,7 @@ MonoBehaviour:
   spawnOnQuestComplete: []
   rewardItems: []
   destroySpawnsOnQuestComplete: 1
-  gainCompetence: 1
+  gainCompetence: 0
   introCutscenePrefab: {fileID: 0}
   outroCutscenePrefab: {fileID: 0}
   isStarted: 0
@@ -19252,7 +19252,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10004
-  m_Sprite: {fileID: 21300000, guid: 783b4dc2f65fe4c6588c33d4723299e2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bd9f080f81b3e4df5834a5250548abcd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
